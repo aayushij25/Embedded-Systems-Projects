@@ -1,0 +1,62 @@
+C51 COMPILER V9.01   SWITCH                                                                07/26/2019 17:25:58 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE SWITCH
+OBJECT MODULE PLACED IN switch.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE switch.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          sbit sw=P1^0;
+   3          sbit led=P2^0;
+   4          sbit led1=P2^1;
+   5          sbit led2=P2^2;
+   6          sbit led3=P2^3;
+   7          void Delay(int a)
+   8          {
+   9   1      int j;
+  10   1      int i;
+  11   1      for(i=0;i<a;i++)
+  12   1      {
+  13   2      for(j=0;j<100;j++)
+  14   2      {}
+  15   2      }
+  16   1      }
+  17          void main()
+  18          {
+  19   1      sw=1;
+  20   1      while(1)
+  21   1      {
+  22   2      if(sw==0)
+  23   2      {
+  24   3      led=1;
+  25   3      led1=1;
+  26   3      led2=1;
+  27   3      led3=1;
+  28   3      Delay(100);
+  29   3      }
+  30   2      else
+  31   2      {
+  32   3      led=0;
+  33   3      led1=0;
+  34   3      led2=0;
+  35   3      led3=0;
+  36   3      Delay(100);
+  37   3      }
+  38   2      }
+  39   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     77    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
